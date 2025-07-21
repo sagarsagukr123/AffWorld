@@ -1,0 +1,301 @@
+/* Common styles */
+:root {
+  --primary-color: #1a73e8;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #ddd;
+  --bg-light: #f8f9fa;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Auth Pages (Login) */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-light);
+  padding: 1rem;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.auth-header {
+  padding: 2rem;
+  text-align: center;
+  background: var(--primary-color);
+  color: white;
+}
+
+.auth-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.auth-header p {
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+}
+
+.auth-form {
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-button:hover:not(:disabled) {
+  background-color: #1557b0;
+}
+
+.auth-button.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Dashboard and Products */
+.dashboard-container {
+  min-height: 100vh;
+  background-color: var(--bg-light);
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+.nav-left {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background-color: var(--bg-light);
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  background-color: #e8f0fe;
+}
+
+.welcome-text {
+  color: var(--text-light);
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+.dashboard-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* Table Styles */
+.table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.product-table th {
+  background-color: var(--bg-light);
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-button {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.delete-button {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.add-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--success-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+/* Demo Credentials */
+.demo-credentials {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.demo-credentials h3 {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.credential-box {
+  background-color: var(--bg-light);
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.credential-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.credential-item span {
+  color: var(--text-light);
+}
+
+.credential-item code {
+  background-color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: var(--primary-color);
+}
+
+/* Error Message */
+.error-message {
+  color: var(--danger-color);
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: #f8d7da;
+  border-radius: 4px;
+}
+
+.form-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
